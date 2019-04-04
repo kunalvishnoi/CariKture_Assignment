@@ -1,0 +1,352 @@
+* {box-sizing: border-box}
+
+body {
+font-family: futura, sans-serif;
+margin:0;
+overflow-x: hidden;
+}
+.mySlides {display: none}
+
+@font-face {
+  font-family: futura;
+  src: url(font/paratypemedium.otf);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 32px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 3vh;
+  left: 15vw;
+  min-width: 30%;
+}
+
+.carousel_large {
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 0;
+  background-color: black;
+}
+@media(max-width: 768px){
+  .carousel_large {
+    font-size: 36px;
+  }
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.back_img_1 {
+  background-image: url(http://markup.themewagon.com/tryfreya/assets/images/header_1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: multiply;
+}
+.back_img_2 {
+  background-image: url(http://markup.themewagon.com/tryfreya/assets/images/header_2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: multiply;
+}
+.back_img_3 {
+  background-image: url(http://markup.themewagon.com/tryfreya/assets/images/header_3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: multiply;
+}
+.text_only {
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1f1f1f;
+  font-size: 36px;
+  font-weight: 400;
+  padding-top: 50px;
+}
+.text_small{
+  text-align: center;
+  color: #555;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+   display: flex;
+  -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   margin-right: -15px;
+   margin-left: -15px;
+}
+.one_three {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.one_two {
+    flex: 0 0 50.00000%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.one {
+    flex: 0 0 100.00000%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+ @media(min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+ }
+@media(max-width: 768px){
+  .container {
+    width: 100%;
+  }
+  .one_three , .one_two {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .text_only {
+    font-size: 24px;
+  }
+}
+.image_text {
+  text-align: center;
+   color: #1f1f1f;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.parallax {
+  /* The image used */
+  background-image: url("http://markup.themewagon.com/tryfreya/assets/images/banner_1.jpg");
+  margin-top: 100px;
+
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+}
+.parallax2 {
+  /* The image used */
+  background-image: url("http://markup.themewagon.com/tryfreya/assets/images/banner_2.jpg");
+  margin-top: 100px;
+
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+}
+.parallax3 {
+  /* The image used */
+  margin-top: 100px;
+  background-image: url("http://markup.themewagon.com/tryfreya/assets/images/banner_3.jpg");
+  padding-top: 50px;
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+}
+.parallax4 {
+  /* The image used */
+  margin-top: 100px;
+  background-image: url("http://markup.themewagon.com/tryfreya/assets/images/banner_4.jpg");
+  padding-top: 50px;
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+
+}
+.museo {
+  font-size: 5rem!important;
+  font-weight: 100!important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: serif!important;
+
+}
+@media(max-width: 768px){
+  .museo {
+    font-size: 3rem!important;
+  }
+}
+.manitoba{
+  color: #e1e1e1!important;
+  font-weight: 300!important;
+  letter-spacing: 2px!important;
+}
+.new_section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.coffee{
+  text-align: center;
+  font-weight: normal;
+  color: #1f1f1f;
+  font-size: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.coffee_text {
+  padding-left: 15px;
+  padding-right: 15px;
+color: #6c757d;
+font-weight: normal!important;
+text-align: center;
+width: 75%;
+margin-left: auto;
+margin-right: auto;
+font-size: 20px;
+}
+@media(max-width: 768px){
+  .coffee_text{
+    width: 100%;
+  }
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #e1e1e1;
+  margin-top: 70px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex-direction: column;
+  background-color: #161820;
+}
+.footer h2 {
+  color: #e1e1e1;
+  margin-bottom: 0;
+  font-weight: 100!important;
+}
+.footer p {
+  color: #555;
+}
